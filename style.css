@@ -49,6 +49,7 @@ body {
 .form-controll input:focus,
 .form-controll input:valid{
   outline: 0;
+  border-bottom-color: aqua;
 }
 
 .btn{
@@ -77,3 +78,17 @@ body {
   top: 15px;
   left:0;
 }
+
+.form-controll label span{
+  display: inline-block;
+  font-size: 20px;
+  min-width: 5px;
+  transition: transform .5s cubic-bezier(.7, -.6, .3 , 1.65);
+}
+
+.form-controll input:focus + label span,
+.form-controll input:valid + label span{
+  color: aqua;
+  transform: translateY(-35px);
+} 
+
